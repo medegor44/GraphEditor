@@ -16,8 +16,10 @@ CONFIG += C++11
 SOURCES += main.cpp\
         mainwindow.cpp \
     Graph/graph.cpp \
-    GraphWidget/graphwidget.cpp
+    GraphWidget/graphwidget.cpp \
+    ToolBox/toolbox.cpp
 
 HEADERS  += mainwindow.h \
     Graph/graph.h \
-    GraphWidget/graphwidget.h
+    GraphWidget/graphwidget.h \
+    ToolBox/toolbox.h

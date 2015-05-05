@@ -2,7 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFrame>
+#include <QHBoxLayout>
+
 #include "GraphWidget/graphwidget.h"
+#include "ToolBox/toolbox.h"
 
 class MainWindow : public QMainWindow
 {
@@ -10,6 +14,10 @@ class MainWindow : public QMainWindow
 
 private:
     GraphWidget *graphWidget;
+    ToolBox *toolBox;
+
+    QHBoxLayout *mainLayout;
+    QFrame *mainFrame;
 
 public:
     MainWindow(QWidget *parent = 0);

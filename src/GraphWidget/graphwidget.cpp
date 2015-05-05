@@ -22,9 +22,9 @@ void GraphWidget::mousePressEvent(QMouseEvent *e)
             graph.removePointAt(currentPointIndex); // Убрать с графа
         else
             graph.connectDisconnectPoints(currentPointIndex, pointIndex);
-        // Соединить
+            // Соединить
 
-        waiting = false; // Переключить на ожидание 1
+        waiting = false; // Переключить на ожидание 1 точки
     }
 
     update();
@@ -42,12 +42,14 @@ void GraphWidget::paintEvent(QPaintEvent *e)
     QVector <QPoint> points = graph.getPoints();
     Matrix matrix = graph.getMatrix();
 
+    usualPen.setWidth(2);
     painter.setPen(usualPen);
     for(int i = 0; i < matrix.size(); ++i)
         for(int j = i+1; j < matrix.size(); ++j)
             if(matrix[i][j])
                 painter.drawLine(points[i], points[j]);
 
+    usualPen.setWidth(5);
     for(QPoint p : points) {
         if(waiting && p == points[currentPointIndex])
             painter.setPen(fawPen); // Рисование выбранной точки

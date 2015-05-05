@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QPainter>
 #include <QMouseEvent>
+#include <QLineEdit>
+#include <QDebug>
 
 #include "../Graph/graph.h"
 

@@ -3,6 +3,7 @@
 
 #include <QVector>
 #include <QPoint>
+#include <QLineEdit>
 
 typedef QVector < QVector <int> > Matrix;
 
@@ -26,7 +27,7 @@ public:
 
     void removePointAt(int i);
 
-    void connectDisconnectPoints(int i, int i1, int weight = 1);
+    void connectDisconnectPoints(int i, int j, int weight = 1);
     // Соединить 2 точки
 
     int getPointIndex(QPoint point); // Получить индекс точки в векторе
